@@ -339,3 +339,62 @@ img {
   width: 622px;
   height: auto;
 }
+
+.install {
+  margin: 120px 0;
+}
+@media (max-width: 1200px) {
+  .install {
+    margin: 100px 0;
+    overflow: hidden;
+  }
+}
+.install__title {
+  margin: 0 0 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 52px;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .install__title {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1024px) {
+  .install__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .install__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+}
+.install__slider-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+  border-radius: 16px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.08)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.2) 100%);
+}
+.install__slider-step-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .install__slider .swiper {
+    overflow: visible;
+  }
+}

@@ -1,0 +1,57 @@
+.install {
+  margin: 120px 0;
+
+  @include desktopmd {
+    margin: 100px 0;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    text-align: center;
+    color: #fff;
+
+    @include desktopmd {
+      font-size: 46px;
+    }
+
+    @include laptop {
+      font-size: 36px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+  }
+
+  &__slider {
+    &-step {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      overflow: hidden;
+      border-radius: 16px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    & .swiper {
+      @include desktopmd {
+        overflow: visible;
+      }
+    }
+  }
+}
