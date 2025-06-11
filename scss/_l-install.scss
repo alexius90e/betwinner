@@ -6,6 +6,11 @@
     overflow: hidden;
   }
 
+  &__wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
   &__title {
     margin: 0 0 32px;
     font-family: 'Montserrat', sans-serif;

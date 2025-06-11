@@ -1,0 +1,135 @@
+.info {
+  &__wrapper {
+    padding: 72px;
+    border-radius: 52px;
+    background-color: #00492a;
+
+    @include desktopmd {
+      padding: 40px;
+    }
+
+    @include laptop {
+      border-radius: 42px;
+    }
+
+    @include tablet {
+      padding: 40px 24px;
+      border-radius: 32px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    text-align: center;
+    color: #fff;
+
+    @include desktopmd {
+      font-size: 46px;
+    }
+
+    @include laptop {
+      font-size: 36px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 16px;
+
+    @include desktopmd {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      flex: 0 0 calc(100% / 3 - 16px / 3 * 2);
+
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        width: 44px;
+        margin: 0;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: 8px;
+        background: radial-gradient(290.42% 141.42% at 100% 100%, #4c9912 0%, #0e7922 100%);
+
+        @include desktopmd {
+          width: 40px;
+        }
+
+        @include tablet {
+          width: 36px;
+          border-radius: 6px;
+        }
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 26px;
+          height: auto;
+
+          @include desktopmd {
+            width: 24px;
+          }
+
+          @include tablet {
+            width: 20px;
+          }
+        }
+      }
+
+      &-info {
+        &-name {
+          margin: 0 0 2px;
+          font-family: 'Inter Tight', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: -0.01em;
+          color: rgba(255, 255, 255, 0.8);
+
+          @include desktopmd {
+            font-size: 14px;
+          }
+
+          @include tablet {
+            font-size: 13px;
+          }
+        }
+
+        &-value {
+          font-family: 'Inter Tight', sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          letter-spacing: -0.01em;
+          color: #fff;
+
+          @include desktopmd {
+            font-size: 18px;
+          }
+
+          @include tablet {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
