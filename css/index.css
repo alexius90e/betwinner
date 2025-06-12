@@ -387,6 +387,8 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  max-width: 308px;
+  height: 100%;
   overflow: hidden;
   border-radius: 16px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.08)), to(rgba(255, 255, 255, 0.2)));
@@ -402,7 +404,18 @@ img {
     overflow: visible;
   }
 }
+.install__slider .swiper-slide {
+  width: auto;
+}
 
+.info {
+  margin: 120px 0;
+}
+@media (max-width: 1200px) {
+  .info {
+    margin: 100px 0;
+  }
+}
 .info__wrapper {
   padding: 72px;
   border-radius: 52px;
@@ -421,6 +434,7 @@ img {
 @media (max-width: 768px) {
   .info__wrapper {
     padding: 40px 24px;
+    margin: 0 -10px;
     border-radius: 32px;
   }
 }
@@ -556,4 +570,299 @@ img {
   .info__content-item-info-value {
     font-size: 15px;
   }
+}
+
+.promocodes {
+  margin: 120px 0;
+}
+@media (max-width: 1200px) {
+  .promocodes {
+    margin: 100px 0;
+    overflow: hidden;
+  }
+}
+.promocodes__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.promocodes__title {
+  margin: 0 0 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 52px;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .promocodes__title {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1024px) {
+  .promocodes__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .promocodes__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    text-align: center;
+  }
+}
+@media (max-width: 1200px) {
+  .promocodes__slider .swiper {
+    overflow: visible;
+  }
+}
+.promocodes__slider .swiper-slide {
+  width: auto;
+}
+.promocodes__card {
+  position: relative;
+  display: block;
+  max-width: 308px;
+  height: 100%;
+  padding: 0 20px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #003f20;
+}
+.promocodes__card-figure {
+  margin: 0 -20px;
+  border: 2px solid #003f20;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.promocodes__card-figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.promocodes__card-tag {
+  position: absolute;
+  top: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: inherit;
+      align-content: inherit;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.promocodes__card-tag_deposit {
+  left: 6px;
+  max-width: calc((100% - 12px) / 2);
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+}
+.promocodes__card-tag_time {
+  right: 6px;
+  max-width: calc((100% - 12px) / 2 - 20px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.04) 100%);
+}
+.promocodes__card-tag-icon-image {
+  display: block;
+  max-width: 100%;
+  width: 20px;
+  height: auto;
+}
+.promocodes__card-tag-text {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #ffffff;
+}
+.promocodes__card-tag_deposit .promocodes__card-tag-text {
+  color: #161a18;
+}
+.promocodes__card-tag_time .promocodes__card-tag-text {
+  color: #ffffff;
+}
+.promocodes__card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+}
+.promocodes__card-info-title {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.promocodes__card-info-description {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  text-align: right;
+  color: #fff;
+}
+.promocodes__card-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  margin: 0 -20px;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.promocodes__card-details-text {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.8);
+}
+.promocodes__card-details-more-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  opacity: 0.5;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  cursor: pointer;
+}
+.promocodes__card-details-more-link:hover {
+  opacity: 1;
+}
+.promocodes__card-details-more-link::after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 20px;
+  aspect-ratio: 1/1;
+  background: url(../assets/arrow-right.svg) center/cover no-repeat;
+}
+.promocodes__card-details-more-link:hover::after {
+  -webkit-filter: brightness(0%) invert(100%);
+          filter: brightness(0%) invert(100%);
+}
+.promocodes__card-main {
+  padding: 20px 0;
+}
+.promocodes__card-main-wrapper {
+  position: relative;
+  padding: 10px 14px 12px;
+  padding-right: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 4px 4px 12px 0 rgba(4, 44, 21, 0.8), inset -2px -2px 32px 0 rgba(4, 44, 21, 0.8);
+          box-shadow: inset 4px 4px 12px 0 rgba(4, 44, 21, 0.8), inset -2px -2px 32px 0 rgba(4, 44, 21, 0.8);
+  background-color: #003f20;
+}
+.promocodes__card-main-text {
+  margin: 0 0 2px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.8);
+}
+.promocodes__card-main-code {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  background: radial-gradient(354.6% 128.08% at 96.6% 84.09%, rgb(222, 222, 18) 0%, rgb(76, 153, 18) 64.8347258568%, rgb(14, 121, 34) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.promocodes__card-main-copy {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 24px;
+  aspect-ratio: 1/1;
+  border: none;
+  outline: none;
+  background: url(../assets/file-copy.svg) center/cover no-repeat;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.8;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  cursor: pointer;
+}
+.promocodes__card-main-copy:hover {
+  opacity: 1;
+}
+.promocodes__card-get-button {
+  display: inline-block;
+  width: 100%;
+  padding: 11px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #004f30;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.promocodes__card-get-button:hover {
+  color: #ffffff;
+  background-color: #004f30;
 }

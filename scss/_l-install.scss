@@ -38,6 +38,8 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      max-width: calc((1280px - 16px * 3) / 4);
+      height: 100%;
       overflow: hidden;
       border-radius: 16px;
       background: linear-gradient(
@@ -56,6 +58,10 @@
     & .swiper {
       @include desktopmd {
         overflow: visible;
+      }
+
+      &-slide {
+        width: auto;
       }
     }
   }

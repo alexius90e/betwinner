@@ -1,4 +1,10 @@
 .info {
+  margin: 120px 0;
+
+  @include desktopmd {
+    margin: 100px 0;
+  }
+
   &__wrapper {
     padding: 72px;
     border-radius: 52px;
@@ -14,6 +20,7 @@
 
     @include tablet {
       padding: 40px 24px;
+      margin: 0 -10px;
       border-radius: 32px;
     }
   }

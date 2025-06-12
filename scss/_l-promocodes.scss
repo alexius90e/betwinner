@@ -1,0 +1,294 @@
+.promocodes {
+  margin: 120px 0;
+
+  @include desktopmd {
+    margin: 100px 0;
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0 0 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    color: #fff;
+
+    @include desktopmd {
+      font-size: 46px;
+    }
+
+    @include laptop {
+      font-size: 36px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  &__slider {
+    & .swiper {
+      @include desktopmd {
+        overflow: visible;
+      }
+
+      &-slide {
+        width: auto;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: block;
+    max-width: calc((1280px - 16px * 3) / 4);
+    height: 100%;
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #003f20;
+
+    &-figure {
+      margin: 0 -20px;
+      border: 2px solid #003f20;
+      border-radius: 12px;
+      overflow: hidden;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-tag {
+      position: absolute;
+      top: 6px;
+      display: flex;
+      align-content: inherit;
+      gap: 8px;
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 6px;
+
+      &_deposit {
+        left: 6px;
+        max-width: calc((100% - 12px) / 2);
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+      }
+
+      &_time {
+        right: 6px;
+        max-width: calc((100% - 12px) / 2 - 20px);
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        backdrop-filter: blur(20px);
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.04) 100%);
+      }
+
+      &-icon {
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 20px;
+          height: auto;
+        }
+      }
+
+      &-text {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      &_deposit &-text {
+        color: #161a18;
+      }
+
+      &_time &-text {
+        color: #ffffff;
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 0;
+
+      &-title {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        color: #fff;
+      }
+
+      &-description {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        text-align: right;
+        color: #fff;
+      }
+    }
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 0 -20px;
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+      &-text {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      &-more {
+        &-link {
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          padding: 0;
+          font-family: 'Inter Tight', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: -0.01em;
+          color: #ffffff;
+          border: none;
+          outline: none;
+          opacity: 0.5;
+          transition-property: opacity;
+          transition-timing-function: ease-out;
+          transition-duration: 0.1s;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 20px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/arrow-right.svg) center / cover no-repeat;
+          }
+
+          &:hover::after {
+            filter: brightness(0%) invert(100%);
+          }
+        }
+      }
+    }
+
+    &-main {
+      padding: 20px 0;
+
+      &-wrapper {
+        position: relative;
+        padding: 10px 14px 12px;
+        padding-right: 52px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        box-shadow: inset 4px 4px 12px 0 rgba(4, 44, 21, 0.8),
+          inset -2px -2px 32px 0 rgba(4, 44, 21, 0.8);
+        background-color: #003f20;
+      }
+
+      &-text {
+        margin: 0 0 2px;
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      &-code {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        background: radial-gradient(
+          354.6% 128.08% at 96.6% 84.09%,
+          rgb(222, 222, 18) 0%,
+          rgb(76, 153, 18) 64.834725856781%,
+          rgb(14, 121, 34) 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &-copy {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        display: inline-block;
+        flex: 0 0 auto;
+        width: 24px;
+        aspect-ratio: 1 / 1;
+        border: none;
+        outline: none;
+        background: url(../assets/file-copy.svg) center / cover no-repeat;
+        transform: translateY(-50%);
+        opacity: 0.8;
+        transition-property: opacity;
+        transition-timing-function: ease-out;
+        transition-duration: 0.1s;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-get {
+      &-button {
+        display: inline-block;
+        width: 100%;
+        padding: 11px 12px;
+        box-sizing: border-box;
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #004f30;
+        border: none;
+        border-radius: 10px;
+        background-color: #ffffff;
+        transition-property: color, background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          color: #ffffff;
+          background-color: #004f30;
+        }
+      }
+    }
+  }
+}
