@@ -1,3 +1,23 @@
+const headerEl = document.querySelector('.header');
+
+if (headerEl) {
+  headerEl.addEventListener('click', (event) => {
+    const isBurgerButton = event.target.classList.contains('header__burger-button');
+    const isCloseButton = event.target.classList.contains('header__close-button');
+    const headerNavEl = event.currentTarget.querySelector('.header__nav');
+
+    if (headerEl) {
+      if (isBurgerButton) {
+        headerNavEl.classList.add('active');
+      }
+
+      if (isCloseButton) {
+        headerNavEl.classList.remove('active');
+      }
+    }
+  });
+}
+
 const installSwiperEl = document.querySelector('.install__slider .swiper');
 
 if (installSwiperEl) {
@@ -31,7 +51,7 @@ if (reviewsEl) {
           reviewsHiddenEl.classList.remove('active');
           event.target.classList.remove('active');
           event.target.textContent = 'Показать еще';
-          event.currentTarget.scrollIntoView({ behavior: "smooth" });
+          event.currentTarget.scrollIntoView({ behavior: 'smooth' });
         } else {
           reviewsHiddenEl.classList.add('active');
           event.target.classList.add('active');
