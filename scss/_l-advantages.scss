@@ -1,0 +1,77 @@
+.advantages {
+  margin-top: -38px;
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @include desktop {
+      gap: 8px;
+      max-width: calc(100% - 40px);
+    }
+
+    @include tablet {
+      max-width: 480px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    flex: 0 0 calc(100% / 3 - 20px / 3 * 2);
+    gap: 12px;
+    padding: 16px 34px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: #f2f7f5;
+
+    @include desktop {
+      flex: 0 0 calc(100% / 3 - 8px / 3 * 2);
+    }
+
+    @include laptop {
+      flex: 0 0 calc(100% / 2 - 8px / 2);
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+      padding: 12px 16px;
+    }
+
+    &-icon {
+      flex: 0 0 auto;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 40px;
+        height: auto;
+
+        @include tablet {
+          width: 32px;
+        }
+      }
+    }
+
+    &-text {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      color: #1f2120;
+
+      @include tablet {
+        font-size: 15px;
+      }
+    }
+  }
+}
